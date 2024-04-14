@@ -1,4 +1,5 @@
 .App {
+  overflow: clip;
   text-align: center;
 }
 
@@ -19,6 +20,16 @@
   display: flex;
 }
 
+.flex-bar{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .list-fixed{
   width: 80px;
   text-align: center;
@@ -29,4 +40,43 @@
   background: #43596F;
   height: 100vh;
   box-shadow: 0 3px 4px 0 rgba(0,0,0, .25);
+}
+
+.main-app-container{
+  background: aquamarine;
+}
+
+.main-app-content{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.flexbox-container{
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 100%;
+}
+
+.main-app-leftSlice{
+  margin-top: 66px;
+  margin-left: 0;
+  background: #cdff9e;
+}
+
+.main-app-rightSlice{
+  margin-top: 66px;
+  margin-right: 80px;
+  width: 50vw;
+  background: #ffd69e;
+}
+
+.boldWin{
+  margin-top: 5%;
+  margin-left: 15%;
+  width: 70%;
+  height: 100%;
+  background: #43596F;
 }
