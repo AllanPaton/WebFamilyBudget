@@ -7,11 +7,15 @@ function App() {
 		      <div className="content">
 			      <div className="application-wrap">
 				      <div className="list-fixed"> {/*  Список с функциональными кнопками  */}
-					      <div>1</div>
-					      <div>2</div>
-						  <hr/>
-					      <div>3</div>
-					      <div>Search</div>
+						  <div className="container">
+							  <div className="subway--menu" />
+							  <div className="fluent--wallet-48-filled" />
+						  </div>
+						  <hr className="list-hr"/>
+						  <div className="container">
+							  <div className="f7--calendar" />
+							  <div className="ooui--search"/>
+						  </div>
 				      </div>
 				      <div className="wrap-menu">
 
@@ -47,7 +51,6 @@ function App() {
 													  reprehenderit in voluptate velit esse cillum dolore eu fugiat
 													  nulla pariatur. Excepteur sint occaecat cupidatat non proident,
 													  sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
 											  </div>
 										  </div>
 									  </div>
@@ -55,8 +58,9 @@ function App() {
 							  <div className="main-app-rightSlice">
 								  <div>List</div>
 								  <div>
-									  <div>
-										  COntent
+									  <div className="listbox">
+										  <h1>Operation list</h1>
+
 									  </div>
 								  </div>
 							  </div>
