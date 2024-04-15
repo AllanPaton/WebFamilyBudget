@@ -1,6 +1,13 @@
 import './App.css';
+import React from "react";
 
 function App() {
+
+	const sandwichMenuClick = () =>{
+
+	}
+
+
   return (
       <div className="App">
 	      <div className="application-wrap">
@@ -8,7 +15,7 @@ function App() {
 			      <div className="application-wrap">
 				      <div className="list-fixed"> {/*  Список с функциональными кнопками  */}
 						  <div className="container">
-							  <div className="subway--menu" />
+							  <div onClick={sandwichMenuClick} className="subway--menu" />
 							  <div className="fluent--wallet-48-filled" />
 						  </div>
 						  <hr className="list-hr"/>
@@ -17,6 +24,7 @@ function App() {
 							  <div className="ooui--search"/>
 						  </div>
 				      </div>
+					  <div id="menu" />
 				      <div className="wrap-menu">
 
 				      </div>
