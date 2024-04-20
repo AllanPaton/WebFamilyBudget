@@ -1,0 +1,52 @@
+.block {
+  position: relative;
+  width: 145px;
+  height: 52px;
+}
+._12002 {
+  color: #fdfffe;
+  font-size: 20px;
+  font-family: IBM Plex Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 31.0345%;
+  right: 11.7241%;
+  top: 0;
+  bottom: 50%;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}
+._10 {
+  color: #fdfffe;
+  font-size: 40px;
+  font-family: IBM Plex Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 0;
+  right: 66.8966%;
+  top: 0;
+  bottom: 0;
+  width: min-content;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  white-space: nowrap;
+  flex-direction: column;
+}
+.monday {
+  color: #fff;
+  font-size: 24px;
+  font-family: IBM Plex Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 33.991%;
+  right: 0;
+  top: 32.4%;
+  bottom: 0;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+}

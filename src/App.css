@@ -29,7 +29,7 @@
   margin-left: auto;
   margin-right: auto;
 }
-/*----------RIGHT LIST MENU*/
+/*----------Sidebar*/
 
 .list-fixed{
   width: 80px;
@@ -107,7 +107,7 @@
   transform: scale(1.05);
 }
 
-/*----------LIST END*/
+/*----------Sidebar END*/
 
 .main-app-container{
   background: aquamarine;
@@ -145,18 +145,38 @@
   margin-left: 15%;
   width: 70%;
   height: 40vh;
+  color: #FDFFFE;
   background: #43596F;
+  border-radius: 45px;
 }
+
+/*OPERATION MENU/LIST OR ETC BLYAT */
 
 .listbox{
   background: #43596F;
-  width: 70%;
+  width: 85%;
   height: 70vh;
   margin: auto;
   h1{color: #FDFFFE}
+  border-radius: 45px;
 }
 
+.operation-list {
+  width: 100%;
+  height: 85%;
+  background: violet;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+}
 
+.day-section{
+  width: 100%;
+  height: auto;
+  background: #42586e;
+  margin:1% 0;
+  margin-left: 3%;
+}
 
 #Menu {
   position: fixed;

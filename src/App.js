@@ -1,12 +1,13 @@
 import './App.css';
 import React from "react";
+import OperationDate from "./components/UI/OperationDate/OperationDate";
+import OperationInfo from "./components/UI/OperationInfo/OperationInfo";
 
 function App() {
 
 	const sandwichMenuClick = () =>{
 
 	}
-
 
   return (
       <div className="App">
@@ -68,7 +69,29 @@ function App() {
 								  <div>
 									  <div className="listbox">
 										  <h1>Operation list</h1>
-
+										  <div className="operation-list">
+											  <div className="day-section">
+												  <OperationDate/>
+												  <OperationInfo/>
+											  </div>
+											  <div className="day-section">
+												  <OperationDate/>
+												  <OperationInfo/>
+											  </div>
+											  <div className="day-section">
+												  <OperationDate/>
+												  <OperationInfo/>
+												  <OperationInfo/>
+											  </div>
+											  <div className="day-section">
+												  <OperationDate/>
+												  <OperationInfo/>
+											  </div>
+											  <div className="day-section">
+												  <OperationDate/>
+												  <OperationInfo/>
+											  </div>
+										  </div>
 									  </div>
 								  </div>
 							  </div>

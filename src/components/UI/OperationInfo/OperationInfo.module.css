@@ -1,0 +1,30 @@
+.block {
+  position: relative;
+  width: 100%;
+  height: 88px;
+}
+.rectangle5 {
+  position: absolute;
+  left: 2.5%;
+  right: 1%;
+  top: 93.1818%;
+  bottom: 0;
+  width: 90%;
+  height: 6px;
+  border-radius: 75px;
+  background-color: #848686;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+.rectangle6 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 3.4091%;
+  width: 95%;
+  height: 85px;
+  margin-top: .5%;
+  border-radius: 4px;
+  background-color: #fdfffe;
+  box-shadow: inset 0px 15px 0px #4d9be6, 0px 4px 4px 0px #00000040;
+}
