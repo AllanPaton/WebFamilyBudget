@@ -1,0 +1,75 @@
+.component1.component1 {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.navGraphButton {
+  position: relative;
+  width: 42%;
+  height: 42px;
+  margin: auto auto;
+}
+.rectangle4 {
+  position: absolute;
+  left: 30.6785%;
+  right: 30.6785%;
+  top: 0;
+  bottom: 0;
+  width: 131px;
+  height: 42px;
+  background-color: #43596f;
+}
+
+.rectangle4:hover{
+  outline: dotted red;
+}
+
+.thisMonth {
+  color: #fdfffe;
+  font-size: 24px;
+  font-family: IBM Plex Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  top: 19.0476%;
+  width: 132px;
+  height: 26px;
+  text-align: center;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.prevMonth {
+  color: #43596f;
+  font-size: 16px;
+  font-family: IBM Plex Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 0;
+  right: 69.3215%;
+  top: 14.2857%;
+  bottom: 23.8095%;
+  width: 104px;
+  height: 26px;
+  text-align: center;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.nextMonth {
+  color: #43596f;
+  font-size: 16px;
+  font-family: IBM Plex Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 69.6165%;
+  right: 0;
+  top: 14.2857%;
+  bottom: 23.8095%;
+  width: 103px;
+  height: 26px;
+  text-align: center;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}

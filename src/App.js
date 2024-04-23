@@ -2,6 +2,8 @@ import './App.css';
 import React from "react";
 import OperationDate from "./components/UI/OperationDate/OperationDate";
 import OperationInfo from "./components/UI/OperationInfo/OperationInfo";
+import Component1 from "./components/UI/Section4/Component1/Component1";
+import Section4 from "./components/UI/Section4/Section4";
 
 function App() {
 
@@ -41,25 +43,15 @@ function App() {
 								  <div className="flexbox-container">
 									  <div className="main-app-leftSlice">
 										  <div className="boldWin">
-											  <button>PREV</button>
-											  <button>THIS</button>
-											  <button>NEXT</button>
-											  <div>
-												  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+											  <Section4/>
+											  <div className="win">
+
 											  </div>
 										  </div>
 										  <div className="boldWin">
-											  <button>PREV</button>
-											  <button>THIS</button>
-											  <button>NEXT</button>
-											  <div>
-												  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-													  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-													  enim ad minim veniam, quis nostrud exercitation ullamco laboris
-													  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-													  reprehenderit in voluptate velit esse cillum dolore eu fugiat
-													  nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-													  sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+											  <Section4/>
+											  <div className="win">
+
 											  </div>
 										  </div>
 									  </div>

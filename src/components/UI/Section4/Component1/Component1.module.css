@@ -1,0 +1,32 @@
+.block {
+  position: absolute;
+  left: 73.7463%;
+  right: -73.7463%;
+  top: 385.7143%;
+  bottom: -385.7143%;
+  width: 339px;
+  height: 42px;
+  align-items: flex-start;
+  outline: solid 2px #000;
+  outline-offset: -2px;
+  border-radius: 19px;
+}
+.rectangle2 {
+  z-index: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 19px;
+  background-color: #acb4b8;
+}
+.rectangle3 {
+  z-index: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 52.381%;
+  bottom: 0;
+  background-color: #acb4b8;
+}

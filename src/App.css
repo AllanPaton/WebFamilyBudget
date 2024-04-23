@@ -129,8 +129,10 @@
 
 .main-app-leftSlice{
   margin-top: 66px;
-  margin-left: 0;
-  background: #cdff9e;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr); /* Создаем 2 равные строки */
+  gap: 20px; /* Расстояние между строками */
+  padding: 10px; /* Отступы внутри контейнера */
 }
 
 .main-app-rightSlice{
@@ -142,12 +144,17 @@
 
 .boldWin{
   margin-top: 5%;
-  margin-left: 15%;
-  width: 70%;
-  height: 40vh;
-  color: #FDFFFE;
-  background: #43596F;
+  margin-left: 10%;
+  height: 345px;
+}
+
+.win{
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
   border-radius: 45px;
+  background: #43596F;
+  color: #fdfffe;
 }
 
 /*OPERATION MENU/LIST OR ETC BLYAT */
@@ -155,7 +162,7 @@
 .listbox{
   background: #43596F;
   width: 85%;
-  height: 70vh;
+  height: 80vh;
   margin: auto;
   h1{color: #FDFFFE}
   border-radius: 45px;
