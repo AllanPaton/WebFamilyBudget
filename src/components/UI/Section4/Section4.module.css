@@ -22,7 +22,8 @@
 }
 
 .rectangle4:hover{
-  outline: dotted red;
+  background-color: #6586a7;
+  cursor: default;
 }
 
 .thisMonth {
@@ -56,6 +57,10 @@
   justify-content: flex-end;
   flex-direction: column;
 }
+.prevMonth:hover{
+  color: #fdfffe;
+  cursor: w-resize;
+}
 .nextMonth {
   color: #43596f;
   font-size: 16px;
@@ -72,4 +77,8 @@
   align-items: center;
   justify-content: flex-end;
   flex-direction: column;
+}
+.nextMonth:hover{
+  color: #fdfffe;
+  cursor: e-resize;
 }

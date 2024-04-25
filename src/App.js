@@ -57,7 +57,6 @@ function App() {
 									  </div>
 								  </div>
 							  <div className="main-app-rightSlice">
-								  <div>List</div>
 								  <div>
 									  <div className="listbox">
 										  <h1>Operation list</h1>

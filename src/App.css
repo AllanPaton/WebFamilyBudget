@@ -171,7 +171,7 @@
 .operation-list {
   width: 100%;
   height: 85%;
-  background: violet;
+  background: #42586e;
   display: flex;
   flex-wrap: wrap;
   overflow: scroll;
