@@ -4,6 +4,8 @@ import OperationDate from "./components/UI/OperationDate/OperationDate";
 import OperationInfo from "./components/UI/OperationInfo/OperationInfo";
 import Component1 from "./components/UI/Section4/Component1/Component1";
 import Section4 from "./components/UI/Section4/Section4";
+import OperationList from "./components/UI/OperationList";
+import HeaderFlexbarInfo from "./components/UI/Header-flexbar/Header-flexbar-info";
 
 function App() {
 
@@ -33,11 +35,7 @@ function App() {
 				      </div>
 				      <div className="main-app-container">
 					      <div className="app-header">
-						      <div className="flex-bar">
-							      <div>Income: 9999</div>
-							      <div>Outcome: 9999</div>
-							      <div>Balance: 9999</div>
-						      </div>
+							  <HeaderFlexbarInfo/>
 					      </div>
 					      <div className="main-app-content">
 								  <div className="flexbox-container">
@@ -58,32 +56,7 @@ function App() {
 								  </div>
 							  <div className="main-app-rightSlice">
 								  <div>
-									  <div className="listbox">
-										  <h1>Operation list</h1>
-										  <div className="operation-list">
-											  <div className="day-section">
-												  <OperationDate/>
-												  <OperationInfo/>
-											  </div>
-											  <div className="day-section">
-												  <OperationDate/>
-												  <OperationInfo/>
-											  </div>
-											  <div className="day-section">
-												  <OperationDate/>
-												  <OperationInfo/>
-												  <OperationInfo/>
-											  </div>
-											  <div className="day-section">
-												  <OperationDate/>
-												  <OperationInfo/>
-											  </div>
-											  <div className="day-section">
-												  <OperationDate/>
-												  <OperationInfo/>
-											  </div>
-										  </div>
-									  </div>
+									  <OperationList/>
 								  </div>
 							  </div>
 						  </div>

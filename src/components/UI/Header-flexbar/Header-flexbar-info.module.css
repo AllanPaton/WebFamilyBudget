@@ -1,0 +1,109 @@
+.block {
+    position: relative;
+    display: block;
+    width: 50%;
+    height: 60%;
+    margin: 0 auto;
+    align-content: normal;
+}
+.line2 {
+    position: absolute;
+    left: 0;
+    right: 3.6424%;
+    top: 100%;
+    bottom: 0%;
+    width: 873px;
+    max-width: 100%;
+    height: 4px;
+    max-height: 100%;
+    overflow: visible;
+}
+.icon {
+    width: 100%;
+    height: 100%;
+}
+._999999 {
+    color: #43596f;
+    font-size: 32px;
+    font-family: IBM Plex Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 80.3167%;
+    right: 0%;
+    top: 0;
+    bottom: 0;
+    width: 178.3311px;
+    height: min-content;
+    flex-direction: column;
+}
+.balance {
+    color: #43596f;
+    font-size: 32px;
+    font-family: IBM Plex Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 66.5563%;
+    right: 16.3575%;
+    top: 0;
+    bottom: 0;
+    width: 154.8013px;
+    height: min-content;
+    flex-direction: column;
+}
+.income {
+    color: #4d9be6;
+    font-size: 32px;
+    font-family: IBM Plex Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 0;
+    right: 86.755%;
+    top: 0;
+    bottom: 0;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    flex-direction: column;
+}
+.outcome {
+    color: #e92733;
+    font-size: 32px;
+    font-family: IBM Plex Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 32.2296%;
+    right: 48.4971%;
+    top: 0;
+    bottom: 0;
+    width: 174.6159px;
+    height: min-content;
+    flex-direction: column;
+}
+._100 {
+    color: #e92733;
+    font-size: 32px;
+    font-family: IBM Plex Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 47.7845%;
+    right: 37.7264%;
+    top: 0;
+    bottom: 0;
+    width: 131.2715px;
+    height: min-content;
+    flex-direction: column;
+}
+._2555 {
+    color: #4d9be6;
+    font-size: 32px;
+    font-family: IBM Plex Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+    position: absolute;
+    left: 13.2019%;
+    right: 72.309%;
+    top: 0;
+    bottom: 0;
+    width: 131.2715px;
+    height: min-content;
+    flex-direction: column;
+}
