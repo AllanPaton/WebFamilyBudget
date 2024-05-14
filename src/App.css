@@ -75,10 +75,18 @@
   transform: scale(1.05);
 }
 
+.fluent--wallet-48-filled-black {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='black' d='M6 10v25.75A6.25 6.25 0 0 0 12.25 42h24.5A6.25 6.25 0 0 0 43 35.75v-17.5a6.25 6.25 0 0 0-5-6.125V10.25A4.25 4.25 0 0 0 33.75 6h-23.5a4.25 4.25 0 0 0-4.243 4zm29.5.25V12H10.25a1.75 1.75 0 1 1 0-3.5h23.5c.967 0 1.75.784 1.75 1.75M32.25 26h4.5a1.25 1.25 0 1 1 0 2.5h-4.5a1.25 1.25 0 1 1 0-2.5'/%3E%3C/svg%3E");
+}
+
 .list-hr{
   border: 2px solid #FDFFFE;
 }
-
 .f7--calendar {
   display: inline-block;
   width: 54px;
@@ -91,6 +99,15 @@
 
 .f7--calendar:hover{
   transform: scale(1.05);
+}
+
+.f7--calendar-black {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56'%3E%3Cpath fill='black' d='M11.992 49.574h32.016c4.899 0 7.36-2.437 7.36-7.265V13.69c0-4.828-2.461-7.265-7.36-7.265H11.992c-4.875 0-7.36 2.414-7.36 7.265v28.62c0 4.851 2.485 7.265 7.36 7.265m-.328-3.773c-2.086 0-3.258-1.102-3.258-3.282V20.419c0-2.156 1.172-3.281 3.258-3.281h32.649c2.085 0 3.28 1.125 3.28 3.281V42.52c0 2.18-1.195 3.28-3.28 3.28Zm11.742-20.25h1.383c.82 0 1.102-.235 1.102-1.055v-1.383c0-.82-.281-1.078-1.102-1.078h-1.383c-.82 0-1.078.258-1.078 1.078v1.383c0 .82.258 1.055 1.078 1.055m7.805 0h1.36c.843 0 1.101-.235 1.101-1.055v-1.383c0-.82-.258-1.078-1.102-1.078h-1.359c-.82 0-1.101.258-1.101 1.078v1.383c0 .82.28 1.055 1.101 1.055m7.781 0h1.383c.82 0 1.102-.235 1.102-1.055v-1.383c0-.82-.282-1.078-1.102-1.078h-1.383c-.82 0-1.101.258-1.101 1.078v1.383c0 .82.281 1.055 1.101 1.055m-23.367 7.664h1.383c.82 0 1.102-.235 1.102-1.055v-1.383c0-.82-.282-1.054-1.102-1.054h-1.383c-.82 0-1.101.234-1.101 1.054v1.383c0 .82.28 1.055 1.101 1.055m7.781 0h1.383c.82 0 1.102-.235 1.102-1.055v-1.383c0-.82-.281-1.054-1.102-1.054h-1.383c-.82 0-1.078.234-1.078 1.054v1.383c0 .82.258 1.055 1.078 1.055m7.805 0h1.36c.843 0 1.101-.235 1.101-1.055v-1.383c0-.82-.258-1.054-1.102-1.054h-1.359c-.82 0-1.101.234-1.101 1.054v1.383c0 .82.28 1.055 1.101 1.055m7.781 0h1.383c.82 0 1.102-.235 1.102-1.055v-1.383c0-.82-.282-1.054-1.102-1.054h-1.383c-.82 0-1.101.234-1.101 1.054v1.383c0 .82.281 1.055 1.101 1.055m-23.367 7.687h1.383c.82 0 1.102-.258 1.102-1.078v-1.383c0-.82-.282-1.054-1.102-1.054h-1.383c-.82 0-1.101.234-1.101 1.054v1.383c0 .82.28 1.078 1.101 1.078m7.781 0h1.383c.82 0 1.102-.258 1.102-1.078v-1.383c0-.82-.281-1.054-1.102-1.054h-1.383c-.82 0-1.078.234-1.078 1.054v1.383c0 .82.258 1.078 1.078 1.078m7.805 0h1.36c.843 0 1.101-.258 1.101-1.078v-1.383c0-.82-.258-1.054-1.102-1.054h-1.359c-.82 0-1.101.234-1.101 1.054v1.383c0 .82.28 1.078 1.101 1.078'/%3E%3C/svg%3E");
 }
 
 .ooui--search {
@@ -139,7 +156,7 @@
   margin-top: 66px;
   margin-right: 80px;
   width: 50vw;
-  background: #ffd69e;
+  /*background: #ffd69e;*/
 }
 
 .boldWin{
@@ -198,7 +215,7 @@
 
 /*MENU ANIMATION*/
 
-.SideBarMenu {
+.sideBarMenu {
   position: fixed;
   top: 0;
   right: 0;
@@ -210,7 +227,7 @@
   z-index: 9999;
 }
 
-.SideBarMenu-open {
+.sideBarMenu-open {
   transform: translateX(0);
 }
 
@@ -229,4 +246,142 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+
+/* INPUT BOX*/
+
+.fuckslave{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1000px;
+}
+
+.WrapBox{
+  width: 840px;
+  height: 690px;
+  outline: solid 7px #43596f;
+  border-radius: 83px;
+  background-color: #fdfffe;
+  backdrop-filter: blur(2px);
+
+  display: block; /* Важно! Убедитесь, что .WrapBox - блочный элемент */
+  margin: 0 auto;
+}
+
+.WrapElements {
+  margin: 0 auto;
+  font-size: 20px;
+}
+.WrapElements h1{
+  color: black;
+  font-family: IBM Plex Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+  width: 536px;
+  height: 52px;
+  text-align: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+.WrapElements input{
+  font-family: IBM Plex Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+  width: 710px;
+  height: 5vh;
+  text-align: center;
+  font-size: 23px;
+  background-color: #d9d9d9;
+  box-shadow: 0px 5px 0px 0px#4d9be6;
+}
+.input-group {
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input[type="text"],
+.input-group textarea {
+  font-family: IBM Plex Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+
+.bottom-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: auto;
+  margin-inline: 30%;
+}
+
+.date-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  margin-bottom: 20px;
+}
+
+.date-row {
+  display: flex;
+  align-items: center;
+}
+
+.date-group input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.save-button {
+  background-color: #43596f;
+  color: #fff;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.WrapElements select{
+  font-family: IBM Plex Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  resize: none;
+  height: 5vh;
+  text-align: center;
+  font-size: 23px;
+  background-color: #d9d9d9;
+  box-shadow: 0px 5px 0px 0px#4d9be6;
+}
+
+.lets-icons--user-cicrle-duotone {
+  display: inline-block;
+  width: 9em;
+  height: 9em;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' fill-opacity='0.25' d='M3 12a9 9 0 1 1 18 0a9 9 0 0 1-18 0'/%3E%3Ccircle cx='12' cy='10' r='4' fill='white'/%3E%3Cpath fill='white' fill-rule='evenodd' d='M18.22 18.246c.06.097.041.22-.04.297A8.969 8.969 0 0 1 12 21a8.969 8.969 0 0 1-6.18-2.457a.239.239 0 0 1-.04-.297C6.942 16.318 9.291 15 12 15c2.708 0 5.057 1.318 6.22 3.246' clip-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.sideBarMenu-profileOption{
+  border-bottom: 1px solid rgba(217, 217, 217, 0.76);
+}
+.sideBarMenu-profileOption:hover{
+  background-color: rgb(101, 134, 167);
 }

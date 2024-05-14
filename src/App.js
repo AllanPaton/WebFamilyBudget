@@ -2,8 +2,8 @@ import './App.css';
 import React, {useRef, useEffect, useState} from "react";
 import OperationDate from "./components/UI/OperationDate/OperationDate";
 import OperationInfo from "./components/UI/OperationInfo/OperationInfo";
-import Component1 from "./components/UI/Section4/Component1/Component1";
-import Section4 from "./components/UI/Section4/Section4";
+import Component1 from "./components/UI/MonthPanel/Component1/Component1";
+import Section4 from "./components/UI/MonthPanel/Section4";
 import OperationList from "./components/UI/OperationList";
 import HeaderFlexbarInfo from "./components/UI/Header-flexbar/Header-flexbar-info";
 import SideBar from "./components/UI/SideBar";
@@ -83,3 +83,6 @@ function App() {
 }
 
 export default App;
+
+
+//ААААЙЙЙЙЙ ЕБЛАААНЧИИИИИК!!!!
