@@ -8,6 +8,8 @@ import OperationList from "./components/UI/OperationList";
 import HeaderFlexbarInfo from "./components/UI/Header-flexbar/Header-flexbar-info";
 import SideBar from "./components/UI/SideBar";
 import useModal from "./components/Hooks/useModal";
+import CircleDiogram from "./components/UI/CircleDiogram/CircleDiogram";
+import AreaChartBox from "./components/UI/AreaChartBox/AreaChartBox";
 
 function App() {
 
@@ -57,13 +59,13 @@ function App() {
 									  <div className="boldWin">
 										  <Section4/>
 										  <div className="win">
-
+											  <AreaChartBox/>
 										  </div>
 									  </div>
 									  <div className="boldWin">
 										  <Section4/>
 										  <div className="win">
-
+											  <CircleDiogram/>
 										  </div>
 									  </div>
 								  </div>

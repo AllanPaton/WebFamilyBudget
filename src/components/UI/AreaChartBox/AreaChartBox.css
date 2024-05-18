@@ -1,0 +1,12 @@
+.areaChartContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 94%;
+    margin: 0 auto;
+    padding-top: 24px;
+    background-color: rgba(0,0,0,.0);
+    color: #fff;
+    border-radius: 10px;
+}

@@ -1,0 +1,28 @@
+@media all and (min-width: 480px) {
+    .Login {
+        font-family: IBM Plex Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+        padding: 60px 0;
+        display: block;
+        height: 80vh;
+        width: 10vw;
+        align-content: center;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .Login form {
+        margin: 0 auto;
+        max-width: 320px;
+    }
+
+    .Login button {
+        margin-top: 10px;
+        transition: all  0.5s ease;
+    }
+
+    .Login button:disabled{
+        background-color: #cccccc;
+        transform: scale(95%);
+    }
+
+}

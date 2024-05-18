@@ -1,12 +1,36 @@
 import React from 'react';
 import useModal from "../Hooks/useModal";
 import InputModal from "./InputModal/InputModal";
+import {useNavigate, generatePath} from "react-router-dom";
 
 //СЛОМАЛСИЬ АНИМАЦИИ ПРИ ХУКЕ, СКОРЕЕ ВСЕГО ИЗ-ЗА РЕРЕНДЕРИНГА ! СРОЧНО ФИКС
 
 const SideBar = ({subwayMenu, walletMenu}) => {
 	const { isOpen: isSubwayMenuOpen, setIsOpen: setIsSubwayMenuOpen, modalRef: subwayMenuRef } = useModal();
 	const { isOpen: isWalletMenuOpen, setIsOpen: setIsWalletMenuOpen, modalRef: walletMenuRef } = useModal();
+	const navigate =useNavigate()
+
+	const navigateToPage = (page) => {
+		// Проверяем, что `page` не пустой и не содержит недопустимых символов.
+		if (!page || page.trim() === '') {
+			console.error('Invalid page name: ', page);
+			return;
+		}
+
+		// Используем generatePath, если у вас есть шаблоны маршрутов
+		const routePath = generatePath('/App/:page', {page}); // Пример
+
+		navigate(routePath);
+	}
+
+	const handleCalendarClick = () => {
+		navigateToPage('calendar');
+	};
+
+	const handleSearchClick = () => {
+		navigateToPage('search');
+	};
+
 
 	return (
 		<div className="list-fixed"> {/*  Список с функциональными кнопками  */}
@@ -51,8 +75,8 @@ const SideBar = ({subwayMenu, walletMenu}) => {
 			)}
 			<hr className="list-hr"/>
 			<div className="container">
-				<div className="f7--calendar"/>
-				<div className="ooui--search"/>
+				<div className="f7--calendar" onClick={handleCalendarClick}/>
+				<div className="ooui--search" onClick={handleSearchClick}/>
 			</div>
 		</div>
 	);

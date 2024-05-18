@@ -1,6 +1,7 @@
 .App {
   overflow: auto;
   text-align: center;
+  font-family: IBM Plex Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
 }
 
 .application-wrap{
@@ -127,7 +128,7 @@
 /*----------Sidebar END*/
 
 .main-app-container{
-  background: aquamarine;
+  background: #fdfffe;
 }
 
 .main-app-content{
