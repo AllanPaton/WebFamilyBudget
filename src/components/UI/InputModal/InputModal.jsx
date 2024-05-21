@@ -18,6 +18,7 @@ const InputModal = ({setMenuOpen}) => {
 						<textarea id="note">Type note here!</textarea>
 					</div>
 					<div className="bottom-section">
+						{}
 						<div className="date-group">
 							<div className="date-row">
 								<svg className="f7--calendar-black"/>

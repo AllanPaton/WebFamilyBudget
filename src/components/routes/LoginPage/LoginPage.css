@@ -25,4 +25,9 @@
         transform: scale(95%);
     }
 
+    .Login button:hover{
+        transform: scale(1.05);
+    }
+
 }
+

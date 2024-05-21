@@ -17,6 +17,11 @@ header{
     margin-left: auto;
 }
 
+.calendarBack:hover{
+    cursor: e-resize;
+    animation: tilt-n-move-shaking 1.55s;
+}
+
 .centerforcenter{
     align-self: center;
 }
@@ -31,4 +36,88 @@ header{
     align-self: center;
     margin-right: 5dvw;
     margin-left: 1dvw;
+}
+
+.calendarWrap{
+    margin: 0 auto;
+    background-color: #fdfffe;
+    width: 85dvw;
+    height: 80dvh;
+}
+
+.calendarHeader{
+    margin: 0 auto;
+    display: flex;
+    height: 10dvh;
+    width: 95%;
+    background-color: #fdfffe;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calendarHeader-day {
+    text-align: center;
+    width: 14.28%; /* 100% / 7 days */
+}
+
+.calendarContent {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for days of the week */
+    gap: 5px; /* Adjust spacing between days */
+    padding: 10px;
+    background-color: #42586e;
+    height: 85%;
+}
+
+.calendarDay {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    color: #000;
+    font-size: 24px;
+    font-family: IBM Plex Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    display: flex;
+}
+
+.calendarDay.sunday {
+    color: #FF0000;
+}
+
+.calendarDay-date {
+    position: relative;
+    font-size: 25px;
+    font-family: IBM Plex Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+    left: 1.0004%;
+    top: 60.4866%;
+    text-align: left;
+}
+
+.calendarDay-sum {
+    color: #4d9be6;
+    font-size: 24px;
+    font-family: IBM Plex Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+    position: relative;
+    text-align: right;
+    white-space: nowrap;
+    left: 60%;
+}
+
+.calendarDay-holder {
+    width: 100%;
+    height: 100%;
+}
+
+/*ANIMATIONS!!!*/
+
+@keyframes tilt-n-move-shaking {
+    100% { transform: translate(0, 0) rotate(0deg); }
+    60% { transform: translate(5px, 5px) rotate(5deg); }
+    30% { transform: translate(-5px, 5px) rotate(-5deg); }
+    0% { transform: translate(0, 0) rotate(0deg); }
 }
