@@ -13,18 +13,39 @@ const LoginPage = () => {
 		return email.length > 0 && password.length > 0
 	}
 
-	function  handleSumbit() {
+	async function  handleSumbit() {
 		// eslint-disable-next-line no-undef,no-restricted-globals
 		event.preventDefault()
 
-		//Сделать запрос на сервак для авторизации
+		// Отправка данных серверу
+		try {
+			const response = await fetch('http://localhost:8081/api/auth/login', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					login: email,
+					password: password
+				})
+			});
 
-		// Симуляция -з-
-		if (email === "admin" && password === "password") {
-			console.log("Login successful!");
-			navigate("/App"); // Перенаправляем пользователя на домашнюю страницу
-		} else {
-			alert("Invalid credentials!")
+			if (!response.ok) {
+				const errorData = await response.json();
+				throw new Error(errorData.error || 'Authorization error');
+			}
+
+			const data = await response.json();
+			const token = data.token;
+
+			// Сохранение токена (localStorage, sessionStorage, cookies)
+			localStorage.setItem('token', token);
+
+			navigate('/App'); // Перенаправление на  App  после успешного входа
+
+		} catch (error) {
+			console.error(error);
+			alert('Ошибка авторизации: ' + error.message);
 		}
 	}
 
@@ -61,3 +82,5 @@ const LoginPage = () => {
 }
 
 export default LoginPage;
+
+//TO DO: REFACTOR email to login!

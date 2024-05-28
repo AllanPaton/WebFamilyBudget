@@ -10,12 +10,31 @@ import SideBar from "./components/UI/SideBar";
 import useModal from "./components/Hooks/useModal";
 import CircleDiogram from "./components/UI/CircleDiogram/CircleDiogram";
 import AreaChartBox from "./components/UI/AreaChartBox/AreaChartBox";
+import {useNavigate} from "react-router-dom";
 
 function App() {
 
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [isWalletInputOpen, setIsWalletINputOpen] = useState(false);
 	const menuRef = useRef(null);
+	const navigate = useNavigate()
+
+	const [currentMonth, setCurrentMonth] = useState(new Date().getMonth() + 1); // Информация о текущем месяце (для заапросов
+
+	//БЛОК ДЛЯ АУНТИФИКАЦИИ
+	const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+	useEffect(() => {
+		const token = localStorage.getItem('token');
+		if (token) {
+			//  Проверка  токена  (можно  использовать  `jwt-decode`  для  извлечения  данных)
+			setIsAuthenticated(true);
+		} else {
+			navigate('/'); //  Перенаправление  на  страницу  логина,  если  токена  нет
+		}
+	}, []); //  Запускаем  useEffect  только  при  первом  рендеринге
+
+	//КОНЕЦ БЛОКА АУНТИФИКАЦИИ
 
 /*	const subwayMenu = () => {
 		setIsMenuOpen(!isMenuOpen);
@@ -37,49 +56,54 @@ function App() {
 	}, [isMenuOpen]);*/
 
   return (
-      <div className="App">
-	      <div className="application-wrap">
-		      <div className="content">
-				  <div className="application-wrap">
-					  <SideBar/> {/* TO DO: SEARCH + CALENDAR*/}
-					  <div id="menu">
+	  <div>
+		  {isAuthenticated ? (
+	      <div className="App">
+		      <div className="application-wrap">
+			      <div className="content">
+					  <div className="application-wrap">
+						  <SideBar/> {/* TO DO: SEARCH + CALENDAR*/}
+						  <div id="menu">
 
 
-					  </div>
-					  <div className="wrap-menu">
-
-					  </div>
-					  <div className="main-app-container">
-						  <div className="app-header">
-							  <HeaderFlexbarInfo/>
 						  </div>
-						  <div className="main-app-content">
-							  <div className="flexbox-container">
-								  <div className="main-app-leftSlice">
-									  <div className="boldWin">
-										  <Section4/>
-										  <div className="win">
-											  <AreaChartBox/>
+						  <div className="wrap-menu">
+
+						  </div>
+						  <div className="main-app-container">
+							  <div className="app-header">
+								  <HeaderFlexbarInfo currentMonth={currentMonth}/>
+							  </div>
+							  <div className="main-app-content">
+								  <div className="flexbox-container">
+									  <div className="main-app-leftSlice">
+										  <div className="boldWin">
+											  <Section4/>
+											  <div className="win">
+												  <AreaChartBox currentMonth={currentMonth}/>
+											  </div>
 										  </div>
-									  </div>
-									  <div className="boldWin">
-										  <Section4/>
-										  <div className="win">
-											  <CircleDiogram/>
+										  <div className="boldWin">
+											  <Section4/>
+											  <div className="win">
+												  <CircleDiogram currentMonth={currentMonth}/>
+											  </div>
 										  </div>
 									  </div>
 								  </div>
-							  </div>
-							  <div className="main-app-rightSlice">
-								  <div>
-									  <OperationList/>
+								  <div className="main-app-rightSlice">
+									  <div>
+										  <OperationList/>
+									  </div>
 								  </div>
 							  </div>
 						  </div>
 					  </div>
 				  </div>
 			  </div>
-		  </div>
+		  </div>  ) : (
+			  <span>Unauthorized</span>
+		  )}
 	  </div>
   );
 }

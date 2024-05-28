@@ -1,16 +1,39 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Area, AreaChart, CartesianGrid, Tooltip, XAxis, YAxis} from "recharts";
 import classes from './AreaChartBox.css'
 
-const data = [
-	{name:"RsA", denyagi:4000, key:1},
-	{name:"RsB", denyagi:3000, key:1},
-	{name:"RsV", denyagi:2000, key:1},
-	{name:"RsZ", denyagi:5000, key:1},
-	{name:"RsG", denyagi:9600, key:1},
-]
+const AreaChartBox = ({currentMonth}) => {
+	const [data, setData] = useState([]);
 
-const AreaChartBox = () => {
+	useEffect(() => {
+		const fetchData = async () => {
+			try {
+				const response = await fetch(`http://localhost:8081/api/protected/userdata/areachart?month=${currentMonth}`, {
+					method: 'GET',
+					headers: {
+						'Authorization': `Bearer ${localStorage.getItem('token')}`
+					}
+				});
+
+				if (!response.ok) {
+					throw new Error('Error retrieving data');
+				}
+
+				const fetchedData = await response.json();
+				const formattedData = fetchedData.map(item => ({
+					date: new Date(item.date),
+					sum: parseInt(item.sum, 10)
+				}));
+				setData(formattedData);
+
+			} catch (error) {
+				console.error(error);
+			}
+		};
+		fetchData();
+	}, [currentMonth]);
+
+
 	return (
 		<div className="areaChartContainer">
 			<AreaChart width={650} height={300} data={data}>
@@ -20,13 +43,14 @@ const AreaChartBox = () => {
 						<stop offset="95%" stopColor="#4d9be6" stopOpacity={0}/>
 					</linearGradient>
 				</defs>
-				<XAxis dataKey="name" tick={{ fontSize: 14, fill: '#fff',}} />
+				<XAxis dataKey="date" tick={{ fontSize: 14, fill: '#fff',}}
+				       tickFormatter={(date) => date.toLocaleDateString()}/>
 				<YAxis tick={{ fontSize: 14, fill: '#fff' ,}}/>
 				<CartesianGrid strokeDasharray="12 3" />
 				<Tooltip />
 				<Area
 					type="monotone"
-					dataKey="denyagi"
+					dataKey="sum"
 					stroke="#4d9be6"
 					fillOpacity={1}
 					fill="url(#4d9be6)"

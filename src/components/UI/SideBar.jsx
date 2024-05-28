@@ -8,7 +8,7 @@ import {useNavigate, generatePath} from "react-router-dom";
 const SideBar = ({subwayMenu, walletMenu}) => {
 	const { isOpen: isSubwayMenuOpen, setIsOpen: setIsSubwayMenuOpen, modalRef: subwayMenuRef } = useModal();
 	const { isOpen: isWalletMenuOpen, setIsOpen: setIsWalletMenuOpen, modalRef: walletMenuRef } = useModal();
-	const navigate =useNavigate()
+	const navigate = useNavigate()
 
 	const navigateToPage = (page) => {
 		// Проверяем, что `page` не пустой и не содержит недопустимых символов.
@@ -31,6 +31,10 @@ const SideBar = ({subwayMenu, walletMenu}) => {
 		navigateToPage('search');
 	};
 
+	const handleLogout = () => {
+		localStorage.removeItem('token');
+		navigate('/');
+	}
 
 	return (
 		<div className="list-fixed"> {/*  Список с функциональными кнопками  */}
@@ -52,7 +56,7 @@ const SideBar = ({subwayMenu, walletMenu}) => {
 						<hr className="list-hr"/>
 						<div>
 							<a>
-								<div className="sideBarMenu-profileOption">
+								<div className="sideBarMenu-profileOption" onClick={handleLogout}>
 									<h1>Log out</h1>
 								</div>
 							</a>

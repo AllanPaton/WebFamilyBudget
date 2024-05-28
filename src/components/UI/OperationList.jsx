@@ -5,7 +5,7 @@ import OperationInfo from "./OperationInfo/OperationInfo";
 const OperationList = () => {
     return (
         <div className="listbox">
-            <h1>oPeration list</h1>
+            <h1>Operation list</h1>
             <div className="operation-list">
                 <div className="day-section">
                     <OperationDate/>

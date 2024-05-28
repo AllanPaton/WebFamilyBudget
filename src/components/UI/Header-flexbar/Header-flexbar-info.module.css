@@ -22,7 +22,7 @@
     width: 100%;
     height: 100%;
 }
-._999999 {
+.totalBalance {
     color: #43596f;
     font-size: 32px;
     font-family: IBM Plex Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
@@ -75,11 +75,11 @@
     right: 48.4971%;
     top: 0;
     bottom: 0;
-    width: 174.6159px;
+    width: max-content;
     height: min-content;
     flex-direction: column;
 }
-._100 {
+.outcomeNum {
     color: #e92733;
     font-size: 32px;
     font-family: IBM Plex Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
@@ -89,11 +89,11 @@
     right: 37.7264%;
     top: 0;
     bottom: 0;
-    width: 131.2715px;
+    width: max-content;
     height: min-content;
     flex-direction: column;
 }
-._2555 {
+.incomeNum {
     color: #4d9be6;
     font-size: 32px;
     font-family: IBM Plex Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
@@ -103,7 +103,7 @@
     right: 72.309%;
     top: 0;
     bottom: 0;
-    width: 131.2715px;
+    width: max-content;
     height: min-content;
     flex-direction: column;
 }
