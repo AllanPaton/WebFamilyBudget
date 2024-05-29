@@ -63,13 +63,8 @@ function App() {
 			      <div className="content">
 					  <div className="application-wrap">
 						  <SideBar/> {/* TO DO: SEARCH + CALENDAR*/}
-						  <div id="menu">
-
-
-						  </div>
-						  <div className="wrap-menu">
-
-						  </div>
+						  <div id="menu"></div>
+						  <div className="wrap-menu"></div>
 						  <div className="main-app-container">
 							  <div className="app-header">
 								  <HeaderFlexbarInfo currentMonth={currentMonth}/>
@@ -78,13 +73,17 @@ function App() {
 								  <div className="flexbox-container">
 									  <div className="main-app-leftSlice">
 										  <div className="boldWin">
-											  <Section4/>
+											  <Section4
+												  currentMonth={currentMonth}
+												  setCurrentMonth={setCurrentMonth}/>
 											  <div className="win">
 												  <AreaChartBox currentMonth={currentMonth}/>
 											  </div>
 										  </div>
 										  <div className="boldWin">
-											  <Section4/>
+											  <Section4
+												  currentMonth={currentMonth}
+												  setCurrentMonth={setCurrentMonth}/>
 											  <div className="win">
 												  <CircleDiogram currentMonth={currentMonth}/>
 											  </div>
@@ -93,7 +92,7 @@ function App() {
 								  </div>
 								  <div className="main-app-rightSlice">
 									  <div>
-										  <OperationList/>
+										  <OperationList currentMonth={currentMonth}/>
 									  </div>
 								  </div>
 							  </div>
@@ -109,6 +108,3 @@ function App() {
 }
 
 export default App;
-
-
-//ААААЙЙЙЙЙ ЕБЛАААНЧИИИИИК!!!!

@@ -110,7 +110,8 @@ const CircleDiogram = ({currentMonth}) => {
 		              borderRadius: '50%',
 		              backgroundColor: COLORS[index % COLORS.length],
 		              marginRight: '5px',
-	              }}/> {entry.name}: {entry.value}
+	              }}/>
+							{entry.name}: {entry.value}
 						</li>
 					))}
 				</ul>

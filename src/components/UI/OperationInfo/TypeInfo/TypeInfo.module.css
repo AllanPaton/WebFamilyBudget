@@ -49,7 +49,7 @@
     flex-direction: column;
 }
 .unnamed2 {
-    color: #e92733;
+    color: #43596f;
     font-size: 24px;
     font-family: IBM Plex Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
@@ -58,8 +58,11 @@
     right: 0;
     top: 100%;
     bottom: 0;
-    width: min-content;
+    width: 20%;
     height: min-content;
     white-space: nowrap;
     flex-direction: column;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
 }
