@@ -6,8 +6,8 @@ const InputModal = ({setMenuOpen}) => {
 			<div className="WrapBox">
 				<div className="WrapElements">
 					<div className="input-group">
-						<label htmlFor="sum">ENTER THE SUM</label>
-						<input type="text" id="sum" value="200 000"/>
+						<label htmlFor="sum" className="mrgn-top-brrrrrrrrrrrrrr">ENTER THE SUM</label>
+						<input type="text" id="sum" placeholder="200 000"/>
 					</div>
 					<div className="input-group">
 						<label htmlFor="category">CATEGORY</label>

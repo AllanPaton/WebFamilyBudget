@@ -205,6 +205,7 @@
 }
 
 #Menu {
+
   position: fixed;
   left: 0;
   top: 0;
@@ -320,7 +321,7 @@
 
 
 .bottom-section {
-  display: flex;
+  /*display: flex;*/
   flex-direction: row;
   align-items: center;
   margin-top: auto;
@@ -386,4 +387,11 @@
 }
 .sideBarMenu-profileOption:hover{
   background-color: rgb(101, 134, 167);
+}
+
+
+/*ДЛЯ СНОСА И РЕФАКТОРИНГА В ПОСЛЕДУЮЩИХ ВЕРСИЯХ*/
+
+.mrgn-top-brrrrrrrrrrrrrr{
+  margin-top: 12%;
 }

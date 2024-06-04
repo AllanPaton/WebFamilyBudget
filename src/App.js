@@ -1,13 +1,9 @@
 import './App.css';
 import React, {useRef, useEffect, useState} from "react";
-import OperationDate from "./components/UI/OperationDate/OperationDate";
-import OperationInfo from "./components/UI/OperationInfo/OperationInfo";
-import Component1 from "./components/UI/MonthPanel/Component1/Component1";
 import Section4 from "./components/UI/MonthPanel/Section4";
 import OperationList from "./components/UI/OperationList";
 import HeaderFlexbarInfo from "./components/UI/Header-flexbar/Header-flexbar-info";
 import SideBar from "./components/UI/SideBar";
-import useModal from "./components/Hooks/useModal";
 import CircleDiogram from "./components/UI/CircleDiogram/CircleDiogram";
 import AreaChartBox from "./components/UI/AreaChartBox/AreaChartBox";
 import {useNavigate} from "react-router-dom";
@@ -20,40 +16,18 @@ function App() {
 	const navigate = useNavigate()
 
 	const [currentMonth, setCurrentMonth] = useState(new Date().getMonth() + 1); // Информация о текущем месяце (для заапросов
-
-	//БЛОК ДЛЯ АУНТИФИКАЦИИ
 	const [isAuthenticated, setIsAuthenticated] = useState(false);
 
+	//  Проверка  токена  (можно  использовать  `jwt-decode`  для  извлечения  данных)
+	//  Перенаправление  на  страницу  логина,  если  токена  нет
 	useEffect(() => {
 		const token = localStorage.getItem('token');
 		if (token) {
-			//  Проверка  токена  (можно  использовать  `jwt-decode`  для  извлечения  данных)
 			setIsAuthenticated(true);
 		} else {
-			navigate('/'); //  Перенаправление  на  страницу  логина,  если  токена  нет
+			navigate('/');
 		}
-	}, []); //  Запускаем  useEffect  только  при  первом  рендеринге
-
-	//КОНЕЦ БЛОКА АУНТИФИКАЦИИ
-
-/*	const subwayMenu = () => {
-		setIsMenuOpen(!isMenuOpen);
-	};
-	const walletInput = () => {
-		setIsWalletINputOpen(!isWalletInputOpen);
-	};
-
-	useEffect(() => {
-		const handleClickOutside = (event) => {
-			if (isMenuOpen && menuRef.current && !menuRef.current.contains(event.target)) { /!*При нажатие вне выдвижного меню, оно закроется!*!/
-				setIsMenuOpen(false);
-			}
-		};
-
-
-		document.addEventListener('mousedown', handleClickOutside);
-		return () => document.removeEventListener('mousedown', handleClickOutside);
-	}, [isMenuOpen]);*/
+	}, []);
 
   return (
 	  <div>
