@@ -105,7 +105,15 @@ header{
     position: relative;
     text-align: right;
     white-space: nowrap;
-    left: 60%;
+    left: 25%;
+}
+
+.negative-sum {
+    color: red;
+}
+
+.calendarDay.empty {
+    background-color: transparent;
 }
 
 .calendarDay-holder {

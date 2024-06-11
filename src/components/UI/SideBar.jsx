@@ -80,7 +80,7 @@ const SideBar = ({subwayMenu, walletMenu}) => {
 			<hr className="list-hr"/>
 			<div className="container">
 				<div className="f7--calendar" onClick={handleCalendarClick}/>
-				<div className="ooui--search" onClick={handleSearchClick}/>
+				{/*<div className="ooui--search" onClick={handleSearchClick}/>*/}
 			</div>
 		</div>
 	);

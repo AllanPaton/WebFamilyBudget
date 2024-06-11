@@ -28,6 +28,7 @@ const InputModal = ({setMenuOpen}) => {
 				// Успешная транзакция
 				console.log('Transaction created successfully');
 				setMenuOpen(false);
+				window.location.reload();
 			} else {
 				// Обработка ошибок
 				const errorData = await response.json();
