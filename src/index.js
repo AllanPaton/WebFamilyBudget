@@ -15,9 +15,8 @@ import LoginPage from './components/routes/LoginPage/LoginPage';
 import SearchPage from "./components/routes/SearchPage/SearchPage";
 import CalendarPage from "./components/routes/CalendarPage/CalendarPage";
 import {Provider} from "react-redux";
-import store from "./store/infoMaster"; // Импортируем компонент LoginPage
+import {store} from "./store";
 
-import infoMaster from "./store/infoMaster";
 
 const router = createBrowserRouter([
         {
@@ -54,7 +53,7 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <Provider store={infoMaster}>
+    <Provider store={store}>
         <RouterProvider router={router}/>
     </Provider>
 );

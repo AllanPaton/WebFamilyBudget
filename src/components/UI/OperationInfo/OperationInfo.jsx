@@ -15,6 +15,7 @@ const OperationInfo = ({ operation }) => {
             </div>
         </div>
     );
+
 };
 
 export default OperationInfo;

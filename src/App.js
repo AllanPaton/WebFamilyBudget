@@ -7,27 +7,29 @@ import SideBar from "./components/UI/SideBar";
 import CircleDiogram from "./components/UI/CircleDiogram/CircleDiogram";
 import AreaChartBox from "./components/UI/AreaChartBox/AreaChartBox";
 import {useNavigate} from "react-router-dom";
+import {fetchAllOperations} from "./store/operationSlice"
+import {useDispatch} from "react-redux";
 
 function App() {
 
-	const [isMenuOpen, setIsMenuOpen] = useState(false);
-	const [isWalletInputOpen, setIsWalletINputOpen] = useState(false);
-	const menuRef = useRef(null);
-	const navigate = useNavigate()
-
-	const [currentMonth, setCurrentMonth] = useState(new Date().getMonth() + 1); // Информация о текущем месяце (для заапросов
+	const dispatch = useDispatch(); // Получаем dispatch
+	const navigate = useNavigate();
+	const [currentMonth, setCurrentMonth] = useState(new Date().getMonth() + 1);
 	const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-	//  Проверка  токена  (можно  использовать  `jwt-decode`  для  извлечения  данных)
-	//  Перенаправление  на  страницу  логина,  если  токена  нет
+
+
 	useEffect(() => {
 		const token = localStorage.getItem('token');
 		if (token) {
 			setIsAuthenticated(true);
+
+			// Диспатчим action для загрузки всех операций
+			dispatch(fetchAllOperations());
 		} else {
 			navigate('/');
 		}
-	}, []);
+	}, [dispatch, navigate]);
 
   return (
 	  <div>
@@ -47,17 +49,13 @@ function App() {
 								  <div className="flexbox-container">
 									  <div className="main-app-leftSlice">
 										  <div className="boldWin">
-											  <Section4
-												  currentMonth={currentMonth}
-												  setCurrentMonth={setCurrentMonth}/>
+											  <Section4/>
 											  <div className="win">
 												  <AreaChartBox currentMonth={currentMonth}/>
 											  </div>
 										  </div>
 										  <div className="boldWin">
-											  <Section4
-												  currentMonth={currentMonth}
-												  setCurrentMonth={setCurrentMonth}/>
+											  <Section4/>
 											  <div className="win">
 												  <CircleDiogram currentMonth={currentMonth}/>
 											  </div>

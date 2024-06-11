@@ -1,11 +1,15 @@
 import React from 'react';
 import {useState} from 'react';
+import {useDispatch} from "react-redux";
+import { addOperation } from '../../../store/operationSlice'
 
 const InputModal = ({setMenuOpen}) => {
 	const [sum, setSum] = useState('');
 	const [category, setCategory] = useState('');
 	const [note, setNote] = useState('');
 	const [date, setDate] = useState('');
+
+	const dispatch = useDispatch();
 
 	const handleSubmit = async (event) => {
 		event.preventDefault();
@@ -26,7 +30,12 @@ const InputModal = ({setMenuOpen}) => {
 			});
 			if (response.ok) {
 				// Успешная транзакция
-				console.log('Transaction created successfully');
+				const newOperation = await response.json();
+				dispatch(addOperation(newOperation));
+				setSum('');
+				setCategory('');
+				setNote('');
+				setDate('');
 				setMenuOpen(false);
 			} else {
 				// Обработка ошибок

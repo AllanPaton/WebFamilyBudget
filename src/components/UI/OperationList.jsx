@@ -1,51 +1,57 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useMemo} from 'react';
 import OperationDate from "./OperationDate/OperationDate";
 import OperationInfo from "./OperationInfo/OperationInfo";
+import { useSelector, useDispatch } from 'react-redux';
+import { addOperation, fetchAllOperations } from '../../store/operationSlice';
 
 
 const OperationList = ({ currentMonth }) => {
-    const [operations, setOperations] = useState([]);
-    const [groupedOperations, setGroupedOperations] = useState({}); // Добавлено состояние для сгруппированных операций
+    const dispatch = useDispatch();
+    const operations = useSelector((state) => state.operations.operations);
+    const status = useSelector((state) => state.operations.status);
+
+    // Фильтрация операций для текущего месяца
+    const currentMonthOperations = operations.filter((operation) => {
+        const operationDate = new Date(operation.date);
+        return operationDate.getMonth() + 1 === currentMonth;
+    });
+
+    // Группировка операций по дате
+    const groupedOperations = currentMonthOperations.reduce((acc, operation) => {
+        const dateKey = operation.date;
+        if (!acc[dateKey]) {
+            acc[dateKey] = [];
+        }
+        acc[dateKey].push(operation);
+        return acc;
+    }, {});
+
+    useEffect(() => {
+        if (status === 'idle') {
+            dispatch(fetchAllOperations());
+        }
+    }, [status, dispatch]);
 
 
-    //Запрос на получение данных
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await fetch(`http://localhost:8081/api/protected/userdata/all?month=${currentMonth}`, {
                     headers: {
-                        Authorization: `Bearer ${localStorage.getItem('token')}`
-                    }
+                        Authorization: `Bearer ${localStorage.getItem('token')}`,
+                    },
                 });
                 const data = await response.json();
-                setOperations(data);
+
+                // Добавляем полученные операции в хранилище Redux
+                data.forEach((operation) => dispatch(addOperation(operation)));
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
         };
+
         fetchData();
-    }, [currentMonth]);
-
-    // Группировка данных после получения
-    useEffect(() => {
-        if (operations.length > 0) {
-            const grouped = groupOperationsByDate(operations);
-            setGroupedOperations(grouped);
-        }
-    }, [operations]);
-
-    // Функция для группировки операций по дате
-    const groupOperationsByDate = (operations) => {
-        const grouped = {};
-        operations.forEach((operation) => {
-            const dateKey = operation.date;
-            if (!grouped[dateKey]) {
-                grouped[dateKey] = [];
-            }
-            grouped[dateKey].push(operation);
-        });
-        return grouped;
-    };
+    }, [currentMonth, dispatch]); // Вызываем useEffect при монтировании и изменении currentMonth
 
     return (
         <div className="listbox">
