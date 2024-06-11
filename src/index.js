@@ -13,7 +13,11 @@ import reportWebVitals from './reportWebVitals';
 import ErrorPage from "./ErrorPage";
 import LoginPage from './components/routes/LoginPage/LoginPage';
 import SearchPage from "./components/routes/SearchPage/SearchPage";
-import CalendarPage from "./components/routes/CalendarPage/CalendarPage"; // Импортируем компонент LoginPage
+import CalendarPage from "./components/routes/CalendarPage/CalendarPage";
+import {Provider} from "react-redux";
+import store from "./store/infoMaster"; // Импортируем компонент LoginPage
+
+import infoMaster from "./store/infoMaster";
 
 const router = createBrowserRouter([
         {
@@ -50,7 +54,7 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <React.StrictMode>
+    <Provider store={infoMaster}>
         <RouterProvider router={router}/>
-    </React.StrictMode>
+    </Provider>
 );
